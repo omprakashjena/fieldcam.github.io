@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap | Future of FieldCam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .roadmap-list { max-width: 800px; margin: 0 auto; position: relative; padding-left: 2rem; }
+        .roadmap-list::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--border); }
+        .roadmap-item { position: relative; margin-bottom: 4rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+        .roadmap-item::before { content: ''; position: absolute; left: calc(-2rem - 6px); top: 0.5rem; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); border: 3px solid var(--bg); box-shadow: 0 0 0 2px var(--primary-light); }
+        .status-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 1rem; }
+        .status-now { background: var(--success); color: white; }
+        .status-soon { background: var(--warning); color: white; }
+        .status-next { background: var(--primary-light); color: white; }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-camera-viewfinder"></i>
+                <span>FieldCam</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="qa.html">Q&A</a></li>
+                <li><a href="roadmap.html" class="active">Roadmap</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-sm">Download App</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: auto; padding-bottom: 40px;">
+            <div class="hero-content reveal">
+                <h1>The Future of <br><span class="gradient-text">Field Documentation.</span></h1>
+                <p>A transparent look at the planned features and upcoming enhancements for the FieldCam platform.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="roadmap-list">
+                <!-- Current -->
+                <div class="roadmap-item reveal">
+                    <div class="status-badge status-now">Available Now</div>
+                    <h2>Encrypted QR Verification</h2>
+                    <p>Proprietary pixel hashing and RSA encryption embedded in every capture. Real-time verification scanner built into the gallery.</p>
+                </div>
+
+                <!-- Soon -->
+                <div class="roadmap-item reveal">
+                    <div class="status-badge status-soon">Coming Q1 2026</div>
+                    <h2>Cloud Sync (E2EE)</h2>
+                    <p>End-to-end encrypted backup to your preferred cloud provider (Google Drive / FTP). Automatic synchronization across organization devices.</p>
+                </div>
+
+                <!-- Next -->
+                <div class="roadmap-item reveal">
+                    <div class="status-badge status-next">Planned</div>
+                    <h2>Organization Dashboard</h2>
+                    <p>Web-based management console for large teams. Track project coverage, audit metadata signatures, and generate bulk analytics from the field.</p>
+                </div>
+
+                <!-- Next -->
+                <div class="roadmap-item reveal">
+                    <div class="status-badge status-next">Planned</div>
+                    <h2>AI Object Recognition</h2>
+                    <p>Automated object detection and counting. Automatically identify and label hardware, assets, or terrain features using on-device neural processing.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2025 FieldCam App. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A | FieldCam Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .qa-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
+        .qa-form { position: sticky; top: 120px; }
+        .input-group { margin-bottom: 1.5rem; }
+        .input-group label { display: block; margin-bottom: 0.5rem; font-weight: 700; font-size: 0.9rem; color: var(--text); }
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-sm);
+            background: var(--bg-alt); color: var(--text); font-family: inherit; font-size: 1rem; transition: var(--transition);
+        }
+        .input-group input:focus { border-color: var(--primary); outline: none; background: var(--bg); }
+        
+        .qa-item { background: var(--bg-alt); padding: 2rem; border-radius: var(--radius-md); margin-bottom: 2rem; border: 1px solid var(--border); transition: var(--transition); }
+        .qa-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary-light); }
+        .qa-question { font-weight: 800; font-size: 1.2rem; margin-bottom: 1rem; color: var(--primary); }
+        .qa-answer { font-size: 1.05rem; }
+        .qa-meta { margin-top: 1.5rem; display: flex; gap: 1rem; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
+        
+        @media (max-width: 968px) { .qa-layout { grid-template-columns: 1fr; } .qa-form { position: static; } }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <nav>
+            <a href="index.html" class="logo">
+                <i class="fas fa-camera-viewfinder"></i>
+                <span>FieldCam</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="qa.html" class="active">Q&A</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-sm">Download App</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: auto; padding-bottom: 40px;">
+            <div class="hero-content reveal">
+                <h1>Public <br><span class="gradient-text">Knowledge Base.</span></h1>
+                <p>Find answers to professional documentation queries or ask our expert team directly.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="qa-layout">
+                <!-- Sidebar Form -->
+                <div class="qa-form reveal">
+                    <div class="card">
+                        <h3>Ask a Question</h3>
+                        <p class="mb-4">Submit your query for public moderation.</p>
+                        <form id="qaForm">
+                            <div class="input-group">
+                                <label>Your Name</label>
+                                <input type="text" placeholder="Optional">
+                            </div>
+                            <div class="input-group">
+                                <label>Category</label>
+                                <select>
+                                    <option>Security & Hashing</option>
+                                    <option>Gallery & Search</option>
+                                    <option>Exports & Reports</option>
+                                    <option>General Support</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Your Question</label>
+                                <textarea rows="5" required placeholder="Describe your query..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Submit Question</button>
+                        </form>
+                        <p id="formFeedback" style="margin-top: 1rem; color: var(--success); text-align: center; display: none;">Submitted for review!</p>
+                    </div>
+                </div>
+
+                <!-- Q&A List -->
+                <div class="qa-list">
+                    <div class="qa-item reveal">
+                        <div class="qa-question">Does FieldCam store my photos on its servers?</div>
+                        <div class="qa-answer">No. FieldCam is a local-first application. All your photos, videos, and cryptographic hashes are stored exclusively on your device. We have no access to your media unless you choose to share it.</div>
+                        <div class="qa-meta">
+                            <span>Security</span> • <span>Dec 18, 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="qa-item reveal">
+                        <div class="qa-question">How does the QR verification handle WhatsApp compression?</div>
+                        <div class="qa-answer">Our verification technology uses a specialized error-correction algorithm that survives social media compression. While the image pixels might degrade, the cryptographic signature remains extractable for verification.</div>
+                        <div class="qa-meta">
+                            <span>Hashing</span> • <span>Dec 15, 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="qa-item reveal">
+                        <div class="qa-question">Can I use custom company logos for the stamps?</div>
+                        <div class="qa-answer">Yes. Professional users can upload their organization's logo in the Settings menu. This logo is then permanently burned into every capture along with the other verification metadata.</div>
+                        <div class="qa-meta">
+                            <span>Features</span> • <span>Dec 10, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2025 FieldCam App. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
